@@ -1,0 +1,23 @@
+{
+    "name": "challengefriend",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "react": "^16.4.2",
+        "react-dom": "^16.4.2",
+        "react-scripts": "1.1.4"
+    },
+    "scripts": {
+        "start": "sass --watch src/styles/scss:src/styles/css | react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject",
+        "sass": "sass --watch src/styles/scss:src/styles/css",
+        "sass:build": "sass --update src/styles/scss:src/styles/css"
+    },
+    "devDependencies": {
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-react": "^6.24.1",
+        "node-sass": "^4.9.3"
+    }
+}
