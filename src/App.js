@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './styles/css/app.css';
 import './styles/css/canvas.css';
 
 // components
-import Canvas from './components/canvas';
+import SelectMap from './containers/selectMap';
+import Header from './components/header';
+
+//p5
+// import mainMap from './sketches/map';
 
 class App extends Component {
+    constructor() {
+        super();
+        this.state = {
+            mapSelected: false,
+            isLoggedIn: true,
+            name: 'Player'
+        }
+    }
+
     render() {
         return (
             <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">Welcome to React</h1>
-                </header>
-                <Canvas />
+                <Header name={this.state.name} />
+                {/* <P5Canvas canvas={mainMap} /> */}
+                <SelectMap />
             </div>
         );
     }
