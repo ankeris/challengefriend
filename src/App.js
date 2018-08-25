@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import './styles/css/app.css';
-import './styles/css/canvas.css';
 
 // components
 import SelectMap from './containers/selectMap';

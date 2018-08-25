@@ -9,16 +9,23 @@
         "react-scripts": "1.1.4"
     },
     "scripts": {
-        "start": "sass --watch src/styles/scss:src/styles/css | react-scripts start",
+        "start": "webpack-dev-server --open --mode development --hot | react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test --env=jsdom",
-        "eject": "react-scripts eject",
-        "sass": "sass --watch src/styles/scss:src/styles/css",
-        "sass:build": "sass --update src/styles/scss:src/styles/css"
+        "eject": "react-scripts eject"
     },
     "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-loader": "^7.1.5",
         "babel-preset-env": "^1.7.0",
         "babel-preset-react": "^6.24.1",
-        "node-sass": "^4.9.3"
+        "css-loader": "^1.0.0",
+        "html-webpack-plugin": "^3.2.0",
+        "node-sass": "^4.9.3",
+        "sass-loader": "^7.1.0",
+        "style-loader": "^0.22.1",
+        "webpack": "^4.17.1",
+        "webpack-cli": "^3.1.0",
+        "webpack-dev-server": "^3.1.5"
     }
 }
