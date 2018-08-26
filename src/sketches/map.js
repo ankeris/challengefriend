@@ -34,27 +34,31 @@ export default function sketch(p5) {
             p5.rectMode(p5.CENTER);
         }
         move() {
-            if (this.x < p5.width - this.diameter / 2) {
-                if (p5.keyIsDown(p5.RIGHT_ARROW) || p5.keyIsDown(68)) {
-                    this.x = this.x + 5;
+            if (p5.keyIsDown(p5.RIGHT_ARROW) || p5.keyIsDown(68)) {
+                if (this.x < p5.width - this.diameter / 2) {
+                this.x = this.x + 5;
                 }
             }
-            if (this.x > 0 + this.diameter / 2) {
-                if (p5.keyIsDown(p5.LEFT_ARROW) || p5.keyIsDown(65)) {
-                    this.x = this.x - 5;
+            
+            if (p5.keyIsDown(p5.LEFT_ARROW) || p5.keyIsDown(65)) {
+                if (this.x > 0 + this.diameter / 2) {
+                this.x = this.x - 5;
                 }
             }
-            if (this.y < p5.height - this.diameter / 2) {
-                if (p5.keyIsDown(p5.DOWN_ARROW) || p5.keyIsDown(83)) {
+
+            if (p5.keyIsDown(p5.DOWN_ARROW) || p5.keyIsDown(83)) {
+                if (this.y < p5.height - this.diameter / 2) {
                     this.y = this.y + 5;
                 }
             }
-            if (this.y > 0 + this.diameter / 2) {
-                if (p5.keyIsDown(p5.UP_ARROW) || p5.keyIsDown(87)) {
+
+            if (p5.keyIsDown(p5.UP_ARROW) || p5.keyIsDown(87)) {
+                if (this.y > 0 + this.diameter / 2) {
                     this.y = this.y - 5;
                 }
             }
         }
+
         shoot() {
             let mouseDirection = p5.createVector(p5.mouseX, p5.mouseY).sub(this.pos).heading();
             p5.mousePressed = () => {
